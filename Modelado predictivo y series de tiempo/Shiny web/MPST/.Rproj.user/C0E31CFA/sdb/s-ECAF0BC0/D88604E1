@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\n### Código original\n#shinyServer(function(input, output) {\n\n#  output$distPlot <- renderPlot({\n\n    # generate bins based on input$bins from ui.R\n#    x    <- faithful[, 2]\n#    bins <- seq(min(x), max(x), length.out = input$bins + 1)\n\n    # draw the histogram with the specified number of bins\n#    hist(x, breaks = bins, col = 'darkgray', border = 'white')\n\n # })\n\n#})\n\n### Prueba 1 ###\n#shinyServer(function(input, output) {\n  \n#  output$distPlot <- renderPlot({\n    \n    # generate bins based on input$bins from ui.R\n#    x    <- faithful[, 2]\n    \n#    boxplot(x, col = 'red')\n    \n#  })\n  \n#})\n\n### Prueba 2 ###\ndatos <- read.table(file.choose(),header = T)\ndatos\n\nshinyServer(function(input,output){\n  \n  output$tabla <- renderTable({\n    \n    datos\n    \n  })\n  \n})",
+    "created" : 1505820588356.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3588353877",
+    "id" : "D88604E1",
+    "lastKnownWriteTime" : 1505822738,
+    "last_content_update" : 1505822738199,
+    "path" : "C:/EstebanRuiz/Materias de Posgrado/Modelado predictivo y series de tiempo/Shiny web/MPST/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
